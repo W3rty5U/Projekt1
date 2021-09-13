@@ -29,7 +29,14 @@ namespace Projekt1
             int x = button1.Left;
             int y = button1.Top;
             label1.Text += x.ToString() + ", " + y.ToString() + "\n";
-            button1.Left++;
+            if (p.X < x)
+                button1.Left++;
+            else
+                button1.Left--;
+            if (p.Y < y)
+                button1.Top++;
+            else
+                button1.Top--;
         }
 
         private void label1_Click(object sender, EventArgs e)
