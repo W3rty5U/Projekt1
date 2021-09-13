@@ -38,10 +38,5 @@ namespace Projekt1
             else
                 button1.Top--;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
