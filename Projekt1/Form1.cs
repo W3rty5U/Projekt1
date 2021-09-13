@@ -24,11 +24,10 @@ namespace Projekt1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int x = Cursor.Position.X;
-            int y = Cursor.Position.Y;
-            label1.Text = x.ToString() + ", " + y.ToString() + "\n";
-            x = button1.Left;
-            y = button1.Top;
+            Point p = this.PointToClient(Cursor.Position);
+            label1.Text = p.X.ToString() + ", " + p.Y.ToString() + "\n";
+            int x = button1.Left;
+            int y = button1.Top;
             label1.Text += x.ToString() + ", " + y.ToString() + "\n";
             button1.Left++;
         }
