@@ -26,15 +26,15 @@ namespace Projekt1
         private void timer1_Tick(object sender, EventArgs e)
         {
             Point p = this.PointToClient(Cursor.Position);
-            int x = button1.Left;
-            int y = button1.Top;
-            if (p.X < x)
+            int x = (button1.Left + button1.Right) / 2;
+            int y = (button1.Top + button1.Bottom) / 2;
+            if (p.X < x && this.ClientSize.Width > button1.Right)
                 button1.Left++;
-            else
+            else if (button1.Left > 0)
                 button1.Left--;
-            if (p.Y < y)
+            if (p.Y < y && this.ClientSize.Height > button1.Bottom)
                 button1.Top++;
-            else
+            else if (button1.Top > 0)
                 button1.Top--;
         }
     }
