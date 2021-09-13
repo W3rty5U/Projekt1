@@ -16,19 +16,18 @@ namespace Projekt1
         {
             InitializeComponent();
         }
-
+        int points = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.Text = "Filip";
+            points++;
+            label1.Text = "Score: " + points;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Point p = this.PointToClient(Cursor.Position);
-            label1.Text = p.X.ToString() + ", " + p.Y.ToString() + "\n";
             int x = button1.Left;
             int y = button1.Top;
-            label1.Text += x.ToString() + ", " + y.ToString() + "\n";
             if (p.X < x)
                 button1.Left++;
             else
