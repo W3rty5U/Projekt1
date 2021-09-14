@@ -20,7 +20,7 @@ namespace Projekt1
         private void button1_Click(object sender, EventArgs e)
         {
             points++;
-            label1.Text = "Score: " + points;
+            button1.Text = "Score: " + points;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
