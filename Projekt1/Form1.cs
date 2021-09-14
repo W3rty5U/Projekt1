@@ -24,11 +24,11 @@ namespace Projekt1
             int y = (button1.Top + button1.Bottom) / 2;
             if (p.X < x && this.ClientSize.Width > button1.Right)
                 button1.Left++;
-            else if (button1.Left > 0)
+            else if (p.X > x && button1.Left > 0)
                 button1.Left--;
             if (p.Y < y && this.ClientSize.Height > button1.Bottom)
                 button1.Top++;
-            else if (button1.Top > 0)
+            else if (p.Y > y && button1.Top > 0)
                 button1.Top--;
         }
 
