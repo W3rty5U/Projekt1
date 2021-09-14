@@ -16,12 +16,6 @@ namespace Projekt1
         {
             InitializeComponent();
         }
-        int points = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            points++;
-            button1.Text = "Score: " + points;
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -36,6 +30,13 @@ namespace Projekt1
                 button1.Top++;
             else if (button1.Top > 0)
                 button1.Top--;
+        }
+
+        int points = 0;
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            points++;
+            button1.Text = "Score: " + points;
         }
     }
 }
